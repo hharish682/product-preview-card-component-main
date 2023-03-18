@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  /*primary Colors */
+
+  --cyan: hsl(167, 76%, 31%);
+  --Dark_cyan: hsl(158, 34%, 21%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /*Neutral Colors */
+
+  --Very_dark_blue: hsl(212, 21%, 14%);
+  --Dark_grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --Fraunces: "Fraunces";
+  --Montserrat: "Montserrat";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--Montserrat);
+  display: grid;
+  background-color: var(--Cream);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: var(--White);
+  overflow: hidden;
+}
+
+article {
+  display: grid;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.Perfume {
+  color: var(--Dark_grayish_blue);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+
+.title {
+  font-family: var(--Fraunces);
+  font-size: 30px;
+  color: var(--Very_dark_blue);
+}
+
+.context {
+  font-size: 14px;
+  color: var(--Dark_grayish_blue);
+  line-height: 1.8;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.current_price {
+  font-family: var(--Fraunces);
+  font-size: 30px;
+  color: var(--cyan);
+}
+
+.old_price {
+  color: var(--Dark_grayish_blue);
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.btn {
+  font-family: var(--Montserrat);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: var(--cyan);
+  border-style: none;
+  color: var(--White);
+  position: relative;
+  isolation: isolate;
+  transition: background-color 250ms linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--Dark_cyan);
+}
+
+.btn::before {
+  content: " ";
+  inset: 0;
+  position: absolute;
+  background-image: url(./images/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 28%;
+}
+
+footer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* article {
+    gap: 1.5rem;
+  } */
+} ;
