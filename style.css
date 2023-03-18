@@ -31,7 +31,7 @@ img {
 
 body {
   font-family: var(--Montserrat);
-  display: grid;
+  padding: 2rem 0;
   background-color: var(--Cream);
   max-width: 600px;
   margin-inline: auto;
